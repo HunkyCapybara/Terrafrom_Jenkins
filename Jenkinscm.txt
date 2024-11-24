@@ -1,0 +1,17 @@
+node{
+    stage('furst'){
+        git branch: 'main', url: 'https://github.com/CloudTechDevOps/Terraform_CICD.git'
+    }
+    
+    stage('secund'){
+        
+        sh 'terraform init'
+        
+    }
+    
+    stage('thurd'){
+        
+        sh'terraform apply -auto-approve'
+        
+    }
+}
